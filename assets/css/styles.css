@@ -1,0 +1,13 @@
+@font-face {
+  font-family: Anthares;
+  src: url(/assets/fonts/Anthares.ttf);
+}
+
+*{
+font-family: "Segoe UI", Segoe Ui, sans-serif;
+background: #181818;
+color: #aaa9a9;
+font-size: 14px;
+text-rendering: optimizeLegibility !important;
+-webkit-font-smoothing: antialiased !important;
+}

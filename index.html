@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css"> 
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css">
+
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="/assets/css/owl/owl.carousel.min.css">
+  <link rel="stylesheet" href="/assets/css/owl/owl.theme.default.min.css">
+
+  <!-- Animate -->
+  <link rel="stylesheet" href="/assets/css/animate/animate.min.css">
+
+  <!-- Hover -->
+  <link rel="stylesheet" href="/assets/css/hover/hover.min.css">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="/assets/css/fontawesome-pro-5.3.1/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- JQuery -->
+  <script src="/assets/js/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+
+  <!-- Owl Carousel -->
+  <script src="/assets/js/owl/owl.carousel.min.js"></script>
+
+  <!-- WOW Js -->
+  <script src="/assets/js/wow/1.1.2.min.js"></script>
+
+  <!-- Mobile -->
+  <script src="/assets/js/wurfl/wurfl.min.js"></script>
+</body>
+
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      loop:true,
+      responsiveClass:true,
+      margin:10,
+      autoplay: true,
+      dots: true,
+      responsive:{
+        0:{
+            items:1,
+            loop:true
+        },
+        600:{
+            items:2,
+            loop:true
+        },
+        1000:{
+            items:3,
+            loop:true
+        }
+      }
+    });
+
+    $(document).ready(function(){
+				$('a[href^="#"]').on('click', function (e) {
+					e.preventDefault();
+
+					var target = this.hash;
+					var $target = $(target);
+
+					$('html, body').animate({
+						'scrollTop': $target.offset().top
+					}, 1000, 'swing');
+				});
+      });
+  });
+
+  if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone") {
+
+  } else {
+    new WOW().init();
+  }
+
+</script>
+</html>
